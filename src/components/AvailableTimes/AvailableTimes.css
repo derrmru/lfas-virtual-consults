@@ -1,0 +1,53 @@
+.availableTimesContainer {
+    width: 70%;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid var(--the-black);
+}
+
+.atBanner h2 {
+    color: var(--the-black);
+}
+
+.atBanner p {
+    margin-bottom: 0;
+}
+
+.hr {
+    width: 90%;
+    height: 1px;
+    margin: 20px auto;
+    background-color: var(--the-black);
+    border: none;
+}
+
+.timesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.atButtons {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--the-black);
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+    width: 90%;
+}
+
+.atButtons:hover {
+    background-color: var(--the-black);
+    color: var(--the-white);
+}
+
+@media only screen and (max-width: 600px) {
+    .availableTimesContainer {
+        width: 98%;
+    }
+}

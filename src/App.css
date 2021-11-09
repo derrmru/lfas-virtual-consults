@@ -1,38 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root {
+  --the-black: #1d355e;
+  --second-color: #248ec2;
+  --the-white: #ffffff;
+  --transparent: #ffffffc9;
+  --see-through: #ffffff00;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .App {
+  color: var(--the-black);
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+hr {
+  width: 80%;
+  background-color: var(--the-black);
+}
+
+a {
+  color: var(--the-black);
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+.portal {
+  width: 68%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-form {
+  overflow-y: scroll;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.back-to-calendar {
+  width: 60%;
+  border: none;
+  background-color: var(--the-black);
+  padding: 10px 0;
+  margin: 10px 0;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.back-to-calendar:hover {
+  background-color: white;
+  color: var(--the-black);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1025px) {
+  .portal {
+      width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .back-to-calendar {
+    width: 90%;
   }
 }
