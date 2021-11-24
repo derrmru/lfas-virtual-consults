@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import './MenuButton.css'
 
 interface Props {
@@ -7,12 +8,12 @@ interface Props {
 
 const MenuButton: React.FC<Props> = (props) => {
     return (
-        <button 
+        <button
             aria-label="toggle navigation menu on mobile"
             className="menu-button"
             onClick={() => props.setToggle()}
-            style={props.show ? {border: 'none'} : {border: 'none'}}
-            >
+            style={props.show ? { border: 'none' } : { border: 'none' }}
+        >
             {
                 !props.show ?
                     <>
@@ -26,4 +27,4 @@ const MenuButton: React.FC<Props> = (props) => {
     )
 }
 
-export default MenuButton
+export default memo(MenuButton)

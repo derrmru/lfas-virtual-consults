@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import './Background.css'
 
 interface Props {
@@ -16,4 +17,4 @@ const Background: React.FC<Props> = (props) => {
     )
 }
 
-export default Background;
+export default memo(Background)
