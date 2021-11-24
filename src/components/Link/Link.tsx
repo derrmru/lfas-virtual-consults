@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import './Link.css'
 
 interface Props {
@@ -20,4 +21,4 @@ const Link: React.FC<Props> = (props) => {
     )
 }
 
-export default Link
+export default memo(Link)
