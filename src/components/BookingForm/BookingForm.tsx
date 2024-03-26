@@ -182,7 +182,7 @@ const BookingForm: React.FC<Props> = ({
                         <>
                             <hr className="divider" />
                             <div style={{ fontSize: '14px' }}>
-                                We will collect the consultation fee of £100 when you submit this form
+                                We will collect the consultation fee of £250 when you submit this form
                             </div>
                             <hr className="divider" />
                         </>
@@ -211,7 +211,7 @@ const BookingForm: React.FC<Props> = ({
                     (mop === 'Self-funding' && privacy) ?
                         <div className="paypal-container">
                             <PayPal
-                                price={100}
+                                price={250}
                                 description="Virtual Consultation with Mr. Kaser Nazir, Consultant Podiatric Surgeon."
                                 paySubmit={() => theSubmission()}
                             />
